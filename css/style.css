@@ -18,6 +18,10 @@ html {
     scroll-behavior: smooth;
 }
 
+svg {
+  filter: drop-shadow(0 0 10px #00FF88) drop-shadow(0 0 20px #00FF88);
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #faf8f5;
