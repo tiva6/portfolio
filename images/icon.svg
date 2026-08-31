@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Vibrant Green Glow Filter -->
+    <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur2" />
+      <feFlood flood-color="#00FF88" flood-opacity="0.9" result="color" />
+      <feComposite in="color" in2="blur1" operator="in" result="glow1" />
+      <feComposite in="color" in2="blur2" operator="in" result="glow2" />
+      <feMerge>
+        <feMergeNode in="glow2" />
+        <feMergeNode in="glow1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#green-glow)">
+    <!-- Circular Vine Ring Frame -->
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#78A281" stroke-width="3" stroke-dasharray="80 12 40 10"/>
+
+    <!-- Subtle Background Code Brackets -->
+    <path d="M 30,34 L 16,50 L 30,66" fill="none" stroke="#3D4741" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 70,34 L 84,50 L 70,66" fill="none" stroke="#3D4741" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Entwined Central Vine S-Curve -->
+    <path d="M 38,82 C 22,60 35,38 52,48 C 66,56 78,35 60,18" fill="none" stroke="#92B095" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Ivy Leaves along the vine -->
+    <!-- Leaf 1 (Top Right) -->
+    <path d="M 60,18 C 66,12 76,16 74,24 C 68,26 62,22 60,18 Z" fill="#A4C4A8"/>
+    <!-- Leaf 2 (Upper Middle) -->
+    <path d="M 53,36 C 62,32 68,40 62,46 C 56,44 53,40 53,36 Z" fill="#88AB8C"/>
+    <!-- Leaf 3 (Center Left) -->
+    <path d="M 34,48 C 26,44 24,54 32,58 C 36,54 36,48 34,48 Z" fill="#A4C4A8"/>
+    <!-- Leaf 4 (Lower Right) -->
+    <path d="M 58,62 C 68,60 70,70 62,74 C 58,70 56,64 58,62 Z" fill="#78A281"/>
+    <!-- Leaf 5 (Bottom Left) -->
+    <path d="M 38,82 C 30,86 28,76 34,72 C 38,76 38,80 38,82 Z" fill="#A4C4A8"/>
+
+    <!-- Floating Code Elements ({ ; }) inside the vine -->
+    <text x="24" y="38" fill="#BCE3C1" font-family="monospace" font-size="8" font-weight="bold">{</text>
+    <text x="70" y="38" fill="#BCE3C1" font-family="monospace" font-size="8" font-weight="bold">;</text>
+    <text x="32" y="72" fill="#BCE3C1" font-family="monospace" font-size="8" font-weight="bold">;</text>
+    <text x="68" y="70" fill="#BCE3C1" font-family="monospace" font-size="8" font-weight="bold">}</text>
+  </g>
+</svg>
